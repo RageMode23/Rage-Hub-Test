@@ -14,6 +14,7 @@ function library:CreateWindow(HubName)
 
 	RageHubUi.Name = "RageHubUiT"
 	RageHubUi.Parent = game:GetService("CoreGui").RobloxGui or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+	--RageHubUi.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 	RageHubUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Main.Name = "Main"
@@ -304,6 +305,22 @@ function library:CreateToggle(Parent, ToggleText, callback)
 	end)
 	
 end
+
+
+library:CreateWindow()
+local Tab1 = library:CreateTab("Main Tab")
+local Tab2 = library:CreateTab("Mics")
+local Tab3 = library:CreateTab("Settings")
+local Tab4 = library:CreateTab("Others")
+library:CreateButton(game:GetService("CoreGui").RobloxGui.RageHubUiT.Main.AllPages["Mics Page"], "Discord Invite Link ! | https://discord.gg/Hm4MDfq2zP")
+local Toggled = false
+
+library:CreateToggle(game:GetService("CoreGui").RobloxGui.RageHubUiT.Main.AllPages["Main Tab Page"],"Auto Farm", function()
+	Toggled = not Toggled
+	while Toggled == true and game:GetService("RunService").Heartbeat:Wait() do
+		print("Toggled")
+	end
+end)
 
 
 return library
