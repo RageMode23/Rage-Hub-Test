@@ -14,7 +14,6 @@ function library:CreateWindow(HubName)
 
 	RageHubUi.Name = "RageHubUiT"
 	RageHubUi.Parent = game:GetService("CoreGui").RobloxGui or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
-	--RageHubUi.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 	RageHubUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Main.Name = "Main"
